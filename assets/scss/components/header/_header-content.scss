@@ -8,9 +8,11 @@
   }
 
   &__title {
-    margin: 0 0 66px;
+    margin: 0px 0px 53px;
 
     text-align: center;
+
+    font-family: "Roboto Slab";
   }
 
   &__actions {
@@ -18,5 +20,6 @@
     justify-content: center;
 
     gap: $gap;
+    margin-top: 87px;
   }
 }

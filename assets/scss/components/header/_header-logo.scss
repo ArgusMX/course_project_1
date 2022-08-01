@@ -1,13 +1,14 @@
 .header-logo {
-  letter-spacing: 0.25px;
+  letter-spacing: 0.23em;
 
-  font-size: 24px;
+  font-size: 1.49rem;
+  line-height: 20px;
 
   &__accent {
     display: inline-block;
 
     margin-right: 7px;
-    padding: 17px 5px 17px 5px;
+    padding: 17px 1px 17px 2px;
 
     border: 3px solid #d53d27;
   }
