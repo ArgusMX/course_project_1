@@ -1,14 +1,17 @@
-.header-logo {
-  letter-spacing: 0.23em;
+@use "../../presets" as *;
+@use "../../mixins/" as *;
 
-  font-size: 1.49rem;
-  line-height: 20px;
+.header-logo {
+  letter-spacing: 0.19em;
+
+  font-size: 1.593rem;
+  line-height: $gap;
 
   &__accent {
     display: inline-block;
 
-    margin-right: 7px;
-    padding: 17px 1px 17px 2px;
+    margin-right: 2px;
+    padding: 17px 1px 17px 5px;
 
     border: 3px solid #d53d27;
   }

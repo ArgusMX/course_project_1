@@ -1,3 +1,6 @@
+@use "../../presets" as *;
+@use "../../mixins/" as *;
+
 .header-content {
   position: relative;
   z-index: 1;
@@ -18,8 +21,7 @@
   &__actions {
     display: flex;
     justify-content: center;
-
-    margin-top: 87px;
+    // margin-top: 89px;
 
     gap: $gap;
   }
