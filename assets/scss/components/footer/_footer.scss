@@ -3,12 +3,14 @@
 
 .footer {
   padding: 50px 20px 70px;
-    text-align: center;
-    color: $color-light;
-    // background-color: #2d3651;
+
   text-align: center;
+  // background-color: #2d3651;
+  text-align: center;
+
+  color: $color-light;
   background-color: $color-primary;
-  
+
 
   &__container {
     @extend %container;
@@ -16,9 +18,7 @@
   &__social {
     display: grid;
     justify-content: center;
-    margin-bottom: 40px;
-  }
-  &__copy {
 
+    margin-bottom: 40px;
   }
 }

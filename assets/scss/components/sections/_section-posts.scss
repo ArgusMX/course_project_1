@@ -11,10 +11,12 @@
 
   &__grid {
     display: grid;
+
+    padding-bottom: $gap;
+
+    gap: $gap;
     grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
     grid-template-columns: repeat(4, 1fr);
-    gap: $gap;
-    padding-bottom: $gap;
   }
 
   &__actions {
@@ -25,39 +27,43 @@
   }
 }
 .post-item {
-
-  background-color: #fefefe;
   height: 100%;
 
-  &__link{
-    height: 100%;
-    grid-template-rows: 300px 1fr;
+  background-color: #fefefe;
+
+  &__link {
     overflow: hidden;
 
+    height: 100%;
+
+    grid-template-rows: 300px 1fr;
   }
 
   &__image {
     display: flex;
     overflow: hidden;
     align-content: center;
-
   }
   &__caption {
     display: grid;
-    height: calc(100% - 300px);
     align-content: center;
+
+    height: calc(100% - 300px);
     padding: 20px;
-    background-color: #EFEFEF;
+
     transition: color 0.5s;
     text-align: center;
+
+    background-color: #efefef;
+
     font-family: "Roboto Slab", serif;
 
     p {
       font-size: $font-size;
     }
-    }
-  } 
-  
+  }
+}
+
 
 @for $i from 1 through 6 {
   .post-item:nth-of-type(#{$i}) {
