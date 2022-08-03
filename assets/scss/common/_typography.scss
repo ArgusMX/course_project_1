@@ -34,8 +34,15 @@ h2 {
   line-height: 1.2em;
   font-weight: 700;
   color: $color-primary;
-
+  margin-top: 0;
 }
+
+h3 {
+  letter-spacing: 0.05em;
+  color: #637588;
+  font-size: 1.125rem;
+}
+
 a {
   text-decoration: none;
 
@@ -47,3 +54,4 @@ p {
   font-family: $font-main;
   color: $color-gray;
 }
+
