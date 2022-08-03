@@ -3,29 +3,33 @@
 
 
 .header-navbar {
-  flex-grow: 1;
+  display: grid;
+  align-items: center;
+
+  letter-spacing: 0.1em;
+
+  justify-items: end;
 
   &__list {
     display: grid;
     justify-content: end;
 
+    width: 100%;
+    padding: 0;
+
+    gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-    @include unlist(0 -22px 0 0);
+    @include unlist(0 -10px 0 0);
   }
 
-  &__item {
-    margin: $gap $gap-sm;
-  }
+
 
   &__link {
-    display: block;
-
     padding: $gap $gap-sm;
 
     transition: color 0.5s;
-    letter-spacing: 0.09em;
 
-    font-size: 18px;
+    font-size: 1.125rem;
 
     &:hover,
     &:focus {
