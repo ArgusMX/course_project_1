@@ -434,7 +434,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
-  padding: 150px 0;
+  padding: 100px 0;
   color: #ffffff;
   background-color: #2d3651;
   background-image: url(../img/img-header.png);
@@ -492,7 +492,6 @@ p {
       -ms-flex-pack: end;
           justify-content: end;
   width: 100%;
-  padding: 0;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
   grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
@@ -512,6 +511,7 @@ p {
 }
 .header-navbar__btn {
   display: none;
+  position: relative;
 }
 
 .header-content {
@@ -846,6 +846,12 @@ p {
 }
 .footer__social a {
   padding: 10px;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+.footer__social a:hover, .footer__social a:focus {
+  color: #d66926;
 }
 .footer__social::after {
   position: absolute;
