@@ -11,59 +11,58 @@
 
   &__grid {
     display: grid;
-
-    padding-bottom: $gap;
-
-    gap: $gap;
     grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
     grid-template-columns: repeat(4, 1fr);
+    gap: $gap;
+    padding-bottom: $gap;
   }
 
   &__actions {
     display: flex;
     justify-content: center;
 
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
   }
 }
 .post-item {
-  height: 100%;
+  position: relative;
+  overflow: hidden;
 
-  background-color: #fefefe;
-
-  &__link {
-    overflow: hidden;
-
+  &__link{
     height: 100%;
-
     grid-template-rows: 300px 1fr;
+
+    &:hover {
+      .post-item__image {
+        transform: scale(1.1);
+      }
+      .post-item__caption {
+        background-color: $color-gray-light;
+      }
+    }
   }
 
   &__image {
     display: flex;
-    overflow: hidden;
     align-content: center;
+    transition: transform 0.5s;
   }
   &__caption {
     display: grid;
-    align-content: center;
-
     height: calc(100% - 300px);
+    align-content: center;
     padding: 20px;
-
+    background-color: #EFEFEF;
     transition: color 0.5s;
     text-align: center;
-
-    background-color: #efefef;
-
     font-family: "Roboto Slab", serif;
-
+    position: relative;
     p {
       font-size: $font-size;
     }
   }
-}
-
+} 
+  
 
 @for $i from 1 through 6 {
   .post-item:nth-of-type(#{$i}) {

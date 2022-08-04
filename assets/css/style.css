@@ -341,14 +341,14 @@ h1 {
 }
 
 h2 {
-  font-family: "Roboto Slab", serif;
-  margin-bottom: 3rem;
-  font-size: 2.5rem;
-  letter-spacing: 0.1em;
-  line-height: 1.2em;
-  font-weight: 700;
-  color: #2d3651;
   margin-top: 0;
+  margin-bottom: 3rem;
+  letter-spacing: 0.1em;
+  color: #2d3651;
+  font-family: "Roboto Slab", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2em;
 }
 
 h3 {
@@ -363,10 +363,10 @@ a {
 }
 
 p {
+  color: #637588;
+  font-family: "Roboto", sans-serif;
   font-size: 1.125rem;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
-  color: #637588;
 }
 
 .footer__container, .posts__container, .form__container, .about__container, .header-content__container, .header-menu__container {
@@ -665,9 +665,9 @@ p {
 }
 
 .about {
-  background-color: #e5e5e5;
-  letter-spacing: 0.055em;
   padding: 100px 0;
+  letter-spacing: 0.055em;
+  background-color: #e5e5e5;
 }
 .about__container {
   display: grid;
@@ -753,25 +753,35 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 30px;
 }
 
 .post-item {
-  background-color: #fefefe;
-  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 .post-item__link {
   height: 100%;
   grid-template-rows: 300px 1fr;
-  overflow: hidden;
+}
+.post-item__link:hover .post-item__image {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.post-item__link:hover .post-item__caption {
+  background-color: #e5e5e5;
 }
 .post-item__image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
   -ms-flex-line-pack: center;
       align-content: center;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 .post-item__caption {
   display: grid;
@@ -785,6 +795,7 @@ p {
   transition: color 0.5s;
   text-align: center;
   font-family: "Roboto Slab", serif;
+  position: relative;
 }
 .post-item__caption p {
   font-size: 16px;
@@ -817,8 +828,8 @@ p {
 .footer {
   padding: 50px 20px 70px;
   text-align: center;
-  color: #ffffff;
   text-align: center;
+  color: #ffffff;
   background-color: #2d3651;
 }
 .footer__social {
@@ -827,6 +838,34 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 40px;
+  position: relative;
+  grid-template-columns: repeat(auto-fit, minmax(50px, -webkit-max-content));
+  grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+  font-size: 36px;
+  font-weight: 400;
+}
+.footer__social a {
+  padding: 10px;
+}
+.footer__social::after {
+  position: absolute;
+  bottom: -20px;
+  left: calc(50% - 37.5px);
+  width: 75px;
+  height: 2px;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer__copy span:nth-of-type(1) {
+  margin-right: -0.5em;
+  letter-spacing: 0.33em;
+  font-weight: 100;
+  color: #637588;
+}
+.footer__copy span:nth-of-type(2) {
+  letter-spacing: 0.05em;
+  color: #e5e5e5;
+  font-weight: 700;
 }
 @media (min-height: 691px) {
   .skills__container {
