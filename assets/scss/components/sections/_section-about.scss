@@ -2,22 +2,53 @@
 @use "../../presets/" as *;
 
 .about {
-  padding: 100px 0;
+
 
   letter-spacing: 0.055em;
 
   color: $color-gray;
   background-color: $color-gray-light;
 
+  @include lg-min {
+    padding: 100px 0;
+  }
+  @include lg-md {
+    padding: 80px 0;
+  }
+  @include md-sm {
+    padding: 60px 0;
+  }
+  @include sm {
+    padding: 60px 0;
+  }
+
   &__container {
     display: grid;
 
     @extend %container;
-    gap: 100px;
-    grid-template-columns: 1fr 271px;
+
+    @include lg-min {
+      gap: 100px;
+      grid-template-columns: 1fr 271px;
+      font-size: 1.125rem;
+    }
+    @include lg-md {
+      gap: 40px;
+      grid-template-columns: 1fr 271px;
+    }
+    @include md-sm {
+      gap: 20px;
+      grid-template-columns: 1fr 236px;
+    }
+    @include sm-min {
+      gap: 20px;
+      grid-template-columns: 1fr;
+    }
+
   }
 
   &__content {
+
     p:first-of-type {
       position: relative;
 
@@ -25,7 +56,19 @@
     }
 
     p:first-of-type::after {
-      right: -50px;
+      @include lg-min {
+        right: -50px;
+      }
+      @include lg-md {
+        right: -20px;
+      }
+      @include md-sm {
+        right: -10px; 
+      }
+      @include sm {
+        display: none;
+      }
+
     }
     p:first-of-type::after {
       position: absolute;

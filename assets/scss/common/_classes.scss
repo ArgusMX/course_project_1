@@ -11,12 +11,14 @@
   transition: background-color 0.5s border-color 0.5s;
   letter-spacing: 0.1em;
 
-
   font-weight: 400;
 
-  &:hover,
-  &:focus {
-    background-color: $color-accent;
+  &--primary {
+    width: 350px;
+    font-size: 1.125rem;
+    height: 60px;
+    border: 2px solid $color-primary;
+    background-color: rgba($color-primary, 0.8);
   }
 
   &--light {
@@ -37,14 +39,20 @@
       height: 40px;
     }
   }
-  &--primary {
-    min-width: 350px;
-    font-size: 1.125rem;
-    height: 60px;
-    border: 2px solid $color-primary;
-    background-color: rgba($color-primary, 0.8);
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+    transition: transform 0.5s;
   }
 }
 .hidden {
   @include visually-hidden;
+}
+button {
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+    border-bottom: $color-accent;
+    transition: transform 0.5s;
+  }
 }
