@@ -20,8 +20,6 @@
 
     letter-spacing: 0.1em;
 
-    font-size: 1.25rem;
-
     @include abs-position;
   }
   &__link {
@@ -33,6 +31,17 @@
     padding: $gap;
 
     transition: color 0.5s;
+
+    @include lg-min {
+      font-size: 1.25rem;
+    }
+    @include lg-md {
+      font-size: 1.25rem;
+    }
+    @include md-min {
+      font-size: 1.125rem;
+    }
+
   }
   &__image {
     transition: transform 0.5s;
@@ -62,6 +71,7 @@
     }
   }
 }
+
 
 @for $i from 1 through 9 {
   .skill-item:nth-of-type(#{$i}) {
