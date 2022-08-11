@@ -2,8 +2,6 @@
 @use "../../presets/" as *;
 
 .about {
-
-
   letter-spacing: 0.055em;
 
   color: $color-gray;
@@ -26,11 +24,11 @@
     display: grid;
 
     @extend %container;
-
     @include lg-min {
+      font-size: 1.125rem;
+
       gap: 100px;
       grid-template-columns: 1fr 271px;
-      font-size: 1.125rem;
     }
     @include lg-md {
       gap: 40px;
@@ -44,11 +42,9 @@
       gap: 20px;
       grid-template-columns: 1fr;
     }
-
   }
 
   &__content {
-
     p:first-of-type {
       position: relative;
 
@@ -63,12 +59,11 @@
         right: -20px;
       }
       @include md-sm {
-        right: -10px; 
+        right: -10px;
       }
       @include sm {
         display: none;
       }
-
     }
     p:first-of-type::after {
       position: absolute;

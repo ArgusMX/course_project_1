@@ -5,21 +5,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
+  color: $color-light;
+  transition: background-color 0.8s;
   padding: 0.5em 1em;
 
-  transition: background-color 0.5s border-color 0.5s;
   letter-spacing: 0.1em;
 
   font-weight: 400;
 
   &--primary {
-    width: 350px;
-    font-size: 1.125rem;
+    min-width: 350px;
     height: 60px;
+
     border: 2px solid $color-primary;
     background-color: rgba($color-primary, 0.8);
-  }
+
+    font-size: 1.125rem;
+    
+      // width: 100%;
+      
+      }
+    
 
   &--light {
     border: 2px solid $color-light;
@@ -28,6 +34,7 @@
     @include lg-min {
       min-width: 250px;
       height: 60px;
+
       font-size: 1.125rem;
     }
     @include lg-md {
@@ -41,18 +48,25 @@
   }
   &:hover,
   &:focus {
+
     background-color: $color-accent;
-    transition: transform 0.5s;
   }
 }
+
 .hidden {
   @include visually-hidden;
 }
-button {
+
+.bt {
+  min-width: 420px;
+
+  transition: background-color 0.4s;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.1);
   &:hover,
   &:focus {
-    background-color: $color-accent;
-    border-bottom: $color-accent;
-    transition: transform 0.5s;
+    border: 2px solid $color-light;
+
   }
 }

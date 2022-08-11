@@ -386,19 +386,20 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: #ffffff;
+  -webkit-transition: background-color 0.8s;
+  -o-transition: background-color 0.8s;
+  transition: background-color 0.8s;
   padding: 0.5em 1em;
-  -webkit-transition: background-color 0.5s border-color 0.5s;
-  -o-transition: background-color 0.5s border-color 0.5s;
-  transition: background-color 0.5s border-color 0.5s;
   letter-spacing: 0.1em;
   font-weight: 400;
 }
 .btn--primary {
-  width: 350px;
-  font-size: 1.125rem;
+  min-width: 350px;
   height: 60px;
   border: 2px solid #2d3651;
   background-color: rgba(45, 54, 81, 0.8);
+  font-size: 1.125rem;
 }
 .btn--light {
   border: 2px solid #ffffff;
@@ -406,11 +407,6 @@ p {
 }
 .btn:hover, .btn:focus {
   background-color: #d66926;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  -o-transition: transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .hidden {
@@ -424,14 +420,17 @@ p {
   border: 0;
 }
 
-button:hover, button:focus {
-  background-color: #d66926;
-  border-bottom: #d66926;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  -o-transition: transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+.bt {
+  min-width: 420px;
+  -webkit-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.bt:hover, .bt:focus {
+  border: 2px solid #ffffff;
 }
 
 .header {
@@ -713,7 +712,7 @@ button:hover, button:focus {
 }
 .form-item__input {
   display: block;
-  width: 100%;
+  min-width: 420px;
   height: 60px;
   padding-right: 30px;
   padding-left: 30px;
@@ -733,23 +732,36 @@ button:hover, button:focus {
 .form-item__input::-moz-placeholder {
   color: #637588;
 }
-.form-item__input:hover, .form-item__inputfocus {
-  border-bottom: rgba(255, 255, 255, 0.6);
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+.form-item__input:-ms-input-placeholder {
+  color: #637588;
 }
-.form .btn--primary {
-  width: 100%;
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0);
-  border-bottom-color: rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.1);
+.form-item__input::-ms-input-placeholder {
+  color: #637588;
 }
-.form .btn--primary:hover, .form .btn--primary:focus {
-  border-bottom: #ffffff;
-  background-color: #d66926;
-  border-color: #ffffff;
-  border-bottom-color: rgbs(#ffffff, 0.2);
+.form-item__input::placeholder {
+  color: #637588;
+}
+.form-item__input:hover, .form-item__input:focus {
+  outline: 0;
+  outline-offset: 0;
+  border: 2px solid #637588;
+  border-bottom: 2px solid #ffffff;
+  background-color: rgba(99, 117, 136, 0.5);
+}
+.form-item__input:hover::-webkit-input-placeholder, .form-item__input:focus::-webkit-input-placeholder {
+  color: rgba(229, 229, 229, 0.5);
+}
+.form-item__input:hover::-moz-placeholder, .form-item__input:focus::-moz-placeholder {
+  color: rgba(229, 229, 229, 0.5);
+}
+.form-item__input:hover:-ms-input-placeholder, .form-item__input:focus:-ms-input-placeholder {
+  color: rgba(229, 229, 229, 0.5);
+}
+.form-item__input:hover::-ms-input-placeholder, .form-item__input:focus::-ms-input-placeholder {
+  color: rgba(229, 229, 229, 0.5);
+}
+.form-item__input:hover::placeholder, .form-item__input:focus::placeholder {
+  color: rgba(229, 229, 229, 0.5);
 }
 .posts__grid {
   display: grid;
@@ -903,8 +915,8 @@ button:hover, button:focus {
 }
 @media (min-width: 992px) {
   h1 {
-    font-size: 3.75rem;
     margin: 0 0 53px 0;
+    font-size: 3.75rem;
   }
   h2 {
     margin-bottom: 3rem;
@@ -926,9 +938,9 @@ button:hover, button:focus {
     padding: 100px 0;
   }
   .about__container {
+    font-size: 1.125rem;
     gap: 100px;
     grid-template-columns: 1fr 271px;
-    font-size: 1.125rem;
   }
   .about__content p:first-of-type::after {
     right: -50px;
@@ -943,8 +955,8 @@ button:hover, button:focus {
 }
 @media (max-width: 991.8px) and (min-width: 768px) {
   h1 {
-    font-size: 2.5rem;
     margin: 0 0 43px 0;
+    font-size: 2.5rem;
   }
   h2 {
     margin-bottom: 2.625rem;
@@ -983,8 +995,8 @@ button:hover, button:focus {
 }
 @media (max-width: 767.8px) {
   h1 {
-    font-size: 1.875rem;
     margin: 0 0 33px 0;
+    font-size: 1.875rem;
   }
   .btn--light {
     min-width: 170px;
@@ -1034,14 +1046,17 @@ button:hover, button:focus {
 @media (max-width: 575.8px) {
   h2 {
     margin-bottom: 2.25rem;
-    font-size: 1.5rem;
     text-align: center;
+    font-size: 1.5rem;
   }
   .about {
     padding: 60px 0;
   }
   .about__content p:first-of-type::after {
     display: none;
+  }
+  .form__container {
+    grid-template-columns: 1fr;
   }
   .posts {
     padding: 60px 0;

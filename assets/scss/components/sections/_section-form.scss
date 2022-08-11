@@ -17,6 +17,9 @@
     @include md-sm {
       grid-template-columns: repeat(2, 1fr);
     }
+    @include sm {
+      grid-template-columns: 1fr;
+    }
 
   }
   &-item {
@@ -29,7 +32,7 @@
     &__input {
       display: block;
 
-      width: 100%;
+      min-width: 420px;
       height: 60px;
       padding-right: 30px;
       padding-left: 30px;
@@ -44,34 +47,21 @@
       background-color: rgba(255, 255, 255, 0.05);
 
       font-size: 1.125rem;
-      &::-webkit-input-placeholder {
+      &::placeholder {
         color: $color-gray;
-       } 
-      &::-moz-placeholder {
-        color: $color-gray;
-       }
-       &:hover,
-       &focus {
-        border-bottom: rgba($color-light, 0.6);
-        //  border-bottom: rgba($color-light, 0.8);
-         background-color: rgba($color-light, 0.1);
-         color: $color-light;
-       }
-    }
-  }
-  .btn--primary {
-    width: 100%;
+      }
 
-    color: #ffffff;
-    border-color: rgba(255, 255, 255, 0);
-    border-bottom-color: rgba(255, 255, 255, 0.2);
-    background-color: rgba(255, 255, 255, 0.1);
-    &:hover,
-    &:focus {
-      border-bottom: $color-light;
-      background-color: $color-accent;
-      border-color: $color-light;
-      border-bottom-color: rgbs($color-light,0.2);
+       &:hover,
+       &:focus {
+        outline: 0;
+        outline-offset: 0;
+        border: 2px solid $color-gray;
+        border-bottom: 2px solid $color-light;
+        background-color: rgba($color-gray, 0.5);
+        &::placeholder {
+          color: rgba($color-gray-light, 0.5);
+        }
+       }
     }
   }
 }
