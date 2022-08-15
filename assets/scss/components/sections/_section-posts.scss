@@ -21,6 +21,7 @@
   &__grid {
     display: grid;
     overflow: hidden;
+
     padding-bottom: $gap;
 
     gap: $gap;
@@ -68,8 +69,8 @@
   }
 
   &__image {
-
     display: flex;
+
     transition: transform 0.5s;
   }
   &__caption {
