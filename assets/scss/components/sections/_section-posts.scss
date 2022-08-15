@@ -20,7 +20,7 @@
 
   &__grid {
     display: grid;
-
+    overflow: hidden;
     padding-bottom: $gap;
 
     gap: $gap;
@@ -68,8 +68,8 @@
   }
 
   &__image {
-    display: flex;
 
+    display: flex;
     transition: transform 0.5s;
   }
   &__caption {
@@ -91,6 +91,9 @@
     p {
       font-size: $font-size;
     }
+  }
+  .btn--primary {
+    min-width: 350px;
   }
 }
 
