@@ -20,7 +20,6 @@
 
   &__grid {
     display: grid;
-    overflow: hidden;
 
     padding-bottom: $gap;
 
@@ -30,12 +29,12 @@
       grid-template-columns: repeat(4, 1fr);
     }
     @include lg-md {
-      grid-template-areas: "p1 p1 p2" "p3 p4 p5" "p5 p5 p6";
+      grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p5 p6";
       grid-template-columns: repeat(3, 1fr);
     }
     @include md-sm {
       grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
     }
     @include sm {
       grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
@@ -49,37 +48,54 @@
   }
 }
 .post-item {
-  position: relative;
-
-  overflow: hidden;
+  transition: background-color 0.5s;
 
   &__link {
+    display: grid;
+    overflow: hidden;
+
     height: 100%;
 
     grid-template-rows: 300px 1fr;
 
     &:hover {
       .post-item__image {
+        z-index: -1;
+
         transform: scale(1.1);
       }
       .post-item__caption {
+        color: $color-primary;
         background-color: $color-gray-light;
+        h3 {
+          color: $color-primary;
+        }
       }
     }
   }
 
   &__image {
+    z-index: -1;
+
     display: flex;
+    overflow: hidden;
+    align-content: center;
+    justify-content: center;
 
     transition: transform 0.5s;
+
+    img {
+      width: 100%;
+
+      border-style: none;
+
+      object-fit: cover;
+    }
   }
   &__caption {
-    position: relative;
-
     display: grid;
     align-content: center;
 
-    height: calc(100% - 300px);
     padding: 20px;
 
     transition: color 0.5s;
