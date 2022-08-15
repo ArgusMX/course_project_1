@@ -109,10 +109,11 @@
       font-size: $font-size;
     }
   }
+  .btn--primary {
+    min-width: 350px;
+  }
 }
-.btn--primary {
-  min-width: 350px;
-}
+
 
 @for $i from 1 through 6 {
   .post-item:nth-of-type(#{$i}) {

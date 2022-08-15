@@ -11,18 +11,21 @@
 
     @extend %container;
     gap: $gap;
-    @include md-min {
-      grid-template-columns: repeat(3, 1fr);
-    }
+
+    grid-template-columns: repeat(3, 1fr);
+
     @include md-sm {
       grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-columns: 1fr;
     }
   }
 
   &-item {
     &:nth-of-type(1) {
       @include md-sm {
-        grid-column: 1/span 2;
+        grid-column: 1 / span 2;
       }
     }
 

@@ -397,6 +397,7 @@ p {
 }
 .btn--primary {
   height: 60px;
+  width: 350px;
   border: 2px solid #2d3651;
   background-color: rgba(45, 54, 81, 0.8);
   font-size: 1.125rem;
@@ -699,6 +700,7 @@ p {
 .form__container {
   display: grid;
   gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
 }
 .form-item__input {
   position: relative;
@@ -793,34 +795,34 @@ p {
   grid-template-rows: 300px 1fr;
 }
 .post-item__link:hover .post-item__image {
+  z-index: -1;
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
-  z-index: -1;
 }
 .post-item__link:hover .post-item__caption {
-  background-color: #e5e5e5;
   color: #2d3651;
+  background-color: #e5e5e5;
 }
 .post-item__link:hover .post-item__caption h3 {
   color: #2d3651;
 }
 .post-item__image {
+  z-index: -1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  -o-transition: transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: -1;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 .post-item__image img {
   width: 100%;
@@ -844,8 +846,7 @@ p {
 .post-item__caption p {
   font-size: 16px;
 }
-
-.btn--primary {
+.post-item .btn--primary {
   min-width: 350px;
 }
 
@@ -935,9 +936,6 @@ p {
 @media (min-width: 768px) {
   .skill-item__link {
     font-size: 1.125rem;
-  }
-  .form__container {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 992px) {
@@ -1084,6 +1082,9 @@ p {
   }
   .about__content p:first-of-type::after {
     display: none;
+  }
+  .form__container {
+    grid-template-columns: 1fr;
   }
   .posts {
     padding: 60px 0;
