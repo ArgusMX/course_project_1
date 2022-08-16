@@ -21,6 +21,18 @@
     letter-spacing: 0.1em;
 
     @include abs-position;
+    @include lg-min {
+      font-size: 1.25rem;
+    }
+    @include lg-md {
+      font-size: 1.25rem;
+    }
+    @include md-sm {
+      font-size: 1.125rem;
+    }
+    @include sm {
+      font-size: 1.125rem;
+    }
   }
   &__link {
     display: flex;
@@ -31,16 +43,6 @@
     padding: $gap;
 
     transition: color 0.5s;
-
-    @include lg-min {
-      font-size: 1.25rem;
-    }
-    @include lg-md {
-      font-size: 1.25rem;
-    }
-    @include md-min {
-      font-size: 1.125rem;
-    }
   }
   &__image {
     transition: transform 0.5s;

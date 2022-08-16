@@ -17,6 +17,7 @@
     display: grid;
 
     @extend %container;
+    gap: $gap;
     grid-template-columns: auto 1fr;
   }
 }

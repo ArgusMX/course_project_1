@@ -20,7 +20,7 @@
 
       text-align: right;
 
-      background-color: rgba($color-gray-dark, 0.95);
+      background-color: rgba($color-gray-dark, 0.9);
 
       @include unlist;
       @include box-shadow;
@@ -33,13 +33,11 @@
 
       gap: $gap;
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
-      @include unlist(0 -20px 0 0);
+      @include unlist(0 -10px 0 0);
     }
   }
 
   &__item {
-    margin: $gap $gap-sm;
-
     @include md {
       margin: $gap $gap-sm;
     }
@@ -49,9 +47,8 @@
     display: block;
 
     transition: color 0.5s;
-    letter-spacing: 0.09em;
 
-    font-size: 18px;
+    font-size: 1.125rem;
 
     @include md-min {
       padding: $gap $gap-sm;
@@ -68,11 +65,10 @@
 
   &__btn {
     position: relative;
-    position: relative;
 
     width: 30px;
     height: 22.5px;
-    margin: 25px 0 25px auto;
+    margin: 39px 0 25.5px auto;
 
     cursor: pointer;
     transition: 0.5s ease-in-out;
@@ -96,7 +92,7 @@
 
       opacity: 1;
       border-radius: 3px;
-      background: white;
+      background: $color-light;
 
       &:nth-child(1) {
         top: 0;
@@ -114,7 +110,7 @@
       transform: rotate(135deg);
     }
     &--active span:nth-child(2) {
-      left: -20px;
+      left: -30px;
 
       opacity: 0;
     }
