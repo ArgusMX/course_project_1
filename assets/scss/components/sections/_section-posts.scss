@@ -56,17 +56,18 @@
 
     height: 100%;
 
+    background-color: transparent;
+
     grid-template-rows: 300px 1fr;
 
     &:hover {
-      .post-item__image {
-        z-index: -1;
-
+      .post-item__image img {
         transform: scale(1.1);
       }
       .post-item__caption {
         color: $color-primary;
-        background-color: $color-gray-light;
+        background-color: #d8d8d8;
+
         h3 {
           color: $color-primary;
         }
@@ -75,17 +76,18 @@
   }
 
   &__image {
-    z-index: -1;
-
     display: flex;
     overflow: hidden;
     align-content: center;
     justify-content: center;
 
-    transition: transform 0.5s;
+
 
     img {
       width: 100%;
+      height: 300px;
+
+      transition: transform 0.5s;
 
       border-style: none;
 
@@ -102,7 +104,7 @@
     text-align: center;
 
     color: $color-gray;
-    background-color: #efefef;
+    background-color: rgba($color-gray-light, 0.5);
 
     font-family: "Roboto Slab", serif;
     p {
